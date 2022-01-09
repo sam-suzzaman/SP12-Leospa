@@ -1,0 +1,906 @@
+/* ===================================================
+                      RUFINA FONT  
+======================================================*/
+@font-face {
+    font-family: 'rufina';
+    src: url('../fonts/gotham/Gotham-Book.eot'),
+        url('../fonts/gotham/Gotham-Book.ttf') format('truetype'),
+        url('../fonts/gotham/Gotham-Book.woff') format('woff');
+}
+
+
+* {
+    transition: all .3s linear;
+}
+
+
+
+
+/* ====================================================
+            CODES FOR MAIN MENU START HERE  
+=======================================================*/
+
+/* === for placing logo and menu perfectely  */
+.header-wrapper .main-menu .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* === for styling the logo===*/
+.header-wrapper .main-menu a.site-logo {
+    font-size: 26px;
+    width: 25%;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* === menu style start==== */
+.header-wrapper .main-menu .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    width: 75%;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-wrapper .main-menu .site-navbar ul li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #263a41;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 30px;
+    transition: .3s;
+}
+
+.header-wrapper .main-menu .site-navbar ul li a:hover,
+.header-wrapper .main-menu .site-navbar ul li.active a {
+    color: #ff817e;
+}
+
+/* === this is for toggler button styling ====== */
+.header-wrapper .main-menu .site-navbar .nav-toggler {
+    border: 3px solid #fff;
+    padding: 5px;
+    background: hsl(0, 39%, 23%);
+    cursor: pointer;
+    height: 39px;
+    display: none;
+}
+
+.header-wrapper .main-menu .site-navbar .nav-toggler span,
+.nav-toggler span::before,
+.nav-toggler span::after {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    display: block;
+    transition: .3s;
+}
+
+.header-wrapper .main-menu .site-navbar .nav-toggler span::before {
+    content: '';
+    transform: translateY(-9px);
+}
+
+
+.header-wrapper .main-menu .site-navbar .nav-toggler span::after {
+    content: '';
+    transform: translateY(6px);
+}
+
+
+.header-wrapper .main-menu .site-navbar .nav-toggler.toggler-open span {
+    background: transparent;
+}
+
+.header-wrapper .main-menu .site-navbar .nav-toggler.toggler-open span::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.header-wrapper .main-menu .site-navbar .nav-toggler.toggler-open span::after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+/* =======================================
+        MEDIA QUERIES FOR NAVBAR  
+==========================================*/
+
+@media screen and (max-width:992px) {
+
+    /*  css for navbar  */
+    .header-wrapper .main-menu .site-navbar .nav-toggler {
+        display: block;
+    }
+
+    .header-wrapper .main-menu .site-navbar {
+        min-height: 60px;
+    }
+
+    .header-wrapper .main-menu .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        /* height: calc(100vh - 60px); (this is for full-screen menu) */
+        left: 0;
+        top: 85px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FCF5EE;
+        max-height: 0%;
+        overflow: hidden;
+        transform: .3s;
+        z-index: 1;
+    }
+
+    .header-wrapper .main-menu .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-wrapper .main-menu .site-navbar ul li a {
+        padding: 25px;
+    }
+
+    .header-wrapper .main-menu .site-navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, .1);
+    }
+
+    .header-wrapper .main-menu .site-navbar ul.open {
+        max-height: 100%;
+        overflow: visible;
+    }
+}
+
+
+
+
+
+/* ===================================================
+        CODES FOR BANNER SECTION START  
+=======================================================*/
+.banner-wrapper {
+    background: url(../media/leaf.png) no-repeat left center/12.5%;
+}
+
+.banner-wrapper .spa-image {
+    width: 43.4%;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+@media screen and (max-width:991px) {
+    .banner-wrapper .spa-image {
+        display: none;
+    }
+}
+
+
+.banner-wrapper .banner-content>span {
+    padding-top: 150px;
+    font-family: 'Rufina', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ff817e;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+    letter-spacing: 1.5px;
+}
+
+/*  for adjusting the padding of banner span at small screen */
+@media screen and (max-width:992px) {
+    .banner-wrapper .banner-content>span {
+        padding-top: 50px;
+    }
+}
+
+.banner-wrapper .banner-content .banner-header {
+    font-family: 'Rufina', serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #1e2528;
+    text-align: left;
+    margin-bottom: 25px;
+    line-height: 75px;
+}
+
+.banner-wrapper .banner-content .banner-para {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #555555;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.banner-wrapper .banner-content a.link-btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ff817e;
+    display: inline-block;
+    padding: 20px 30px;
+    margin-right: 55px;
+    text-align: center;
+}
+
+.banner-wrapper .banner-content a.link-btn:hover {
+    color: #000;
+}
+
+.banner-wrapper .banner-content a.link-btn>i {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.banner-wrapper .banner-content a.video-btn>i {
+    border-radius: 50%;
+    color: #ff817e;
+    background-color: hsl(32, 52%, 94%);
+    display: inline-block;
+    line-height: 44px;
+    text-align: center;
+    margin-right: 10px;
+    height: 44px;
+    width: 44px;
+}
+
+.banner-wrapper .banner-content a.video-btn {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.banner-wrapper .banner-content a.video-btn:hover {
+    color: #ff817e;
+}
+
+
+
+/* ===============================================
+                 ABOUT SECTION  codes start   
+==================================================*/
+.about {
+    position: relative;
+    margin-top: 150px;
+    padding: 50px;
+}
+
+.about .about-container>span {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 10px 0;
+    display: block;
+}
+
+.about .about-container .about-header {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #1e2528;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.about .about-container .about-para {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #b8b8b8;
+    margin-bottom: 60px;
+}
+
+.about .about-container .btn-1 {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    min-width: 170px;
+    padding: 20px 15px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background-color: #ff817e;
+    color: #fff;
+}
+
+.about .about-container .btn-1:hover {
+    color: #000;
+}
+
+/*   positioning images   */
+
+.about .flower-1,
+.flower-2 {
+    position: absolute;
+}
+
+.about .flower-1 {
+    top: 0;
+    left: 16%;
+}
+
+.about .flower-2 {
+    right: 135px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/*  adjusting the plowers in small device  */
+@media screen and (max-width:992px) {
+
+    .about {
+        margin-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .about .flower-1,
+    .flower-2 {
+        display: none;
+    }
+}
+
+
+/* ========================================
+            SERVICE SECTION  
+===========================================*/
+
+.service {
+    padding: 50px 0;
+}
+
+.service .p-rel {
+    position: relative;
+}
+
+.service .item {
+    cursor: pointer;
+}
+
+.service .service-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(255, 129, 126, 0.9);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.service .service-layer:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service .service-layer>span {
+    font-size: 22px;
+    font-family: 'Rufina',
+        serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+.service .service-layer>i {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.service .item:hover .service-layer {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+/* ==================================================
+              PROCEDURE SECTION  
+=====================================================*/
+
+.procedure {
+    padding: 50px 0;
+}
+
+.procedure .header-row {
+    margin-bottom: 90px;
+}
+
+.procedure .header-row .pro-header {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #263a41;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.procedure .header-row .pro-footer {
+    font-family: 'Roboto',
+        sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #888888;
+}
+
+
+.procedure .items-row img.pic.card-img-top {
+    padding: 20px;
+}
+
+.procedure .items-row>.card-deck>.card .card-body h5.card-title {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #263a41;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.procedure .items-row>.card-deck>.card .card-body p.card-text {
+    font-family: 'Roboto',
+        sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #888888;
+    margin-bottom: 45px;
+}
+
+.procedure .items-row>.card-deck>.card .card-body a.btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    min-width: 140px;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background-color: #30383b;
+    margin-bottom: 50px;
+}
+
+.procedure .items-row>.card-deck>.card:hover {
+    box-shadow: 0 5px 20px #f0f0f0;
+    cursor: pointer;
+}
+
+.procedure .items-row>.card-deck>.card:hover .card-body a.btn {
+    background-color: #ff817e;
+}
+
+
+
+
+
+
+/* =============================================================
+        TESTIMONIAL SECTION   
+================================================================*/
+
+.testimonial {
+    padding: 50px 0;
+    background-color: #fff9f8;
+    margin: 100px 0;
+}
+
+.testimonial .testi-items>i.fa-quote-left {
+    font-size: 50px;
+    color: #ff817e;
+    margin-bottom: 50px;
+}
+
+.testimonial .testi-items .testi-para {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #263a41;
+    margin-bottom: 50px;
+}
+
+.testimonial .testi-items .bottom p.testi-para-2 {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #263a41;
+    margin-top: 30px;
+}
+
+.testimonial .testi-items .bottom p.testi-para-2>span {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #263a41;
+}
+
+
+.testimonial .testi-items .bottom>img {
+    width: auto;
+}
+
+
+
+
+
+/* =====================================================
+        TEAM SECTION    
+=========================================================*/
+.team {
+    padding: 50px 0;
+    margin-bottom: 100px;
+}
+
+.team .team-top-row {
+    margin-bottom: 95px;
+}
+
+.team .team-top-row .team-header {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #263a41;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+
+.team .team-top-row .team-para {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #888888;
+}
+
+.team .team-bottom-row .team-items {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.team .team-bottom-row .team-items .mem-details {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15%;
+    margin: auto;
+    max-width: calc(100% - 60px);
+    background-color: #fff;
+    padding: 30px 10px 10px 10px;
+    z-index: 1;
+    box-shadow: 0 5px 20px #f0f0f0;
+}
+
+
+.team .team-bottom-row .team-items .mem-details .card-hdr {
+    font-family: 'Rufina',
+        serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #263a41;
+    margin-bottom: 10px;
+}
+
+.team .team-bottom-row .team-items .mem-details .card-para {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.team .team-bottom-row .team-items .mem-details .social-links {
+    margin-top: -15px;
+    opacity: 0;
+    visibility: hidden;
+    padding-bottom: 20px;
+}
+
+.team .team-bottom-row .team-items .mem-details .social-links>a {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid #42494c;
+    color: #42494c;
+    background-color: transparent;
+    padding: 2px 2px;
+    text-decoration: none;
+}
+
+.team .team-bottom-row .team-items .mem-details .social-links>a:last-child {
+    margin-right: 0;
+}
+
+.team .team-bottom-row .team-items .mem-details .social-links>a:hover {
+    background-color: #ff817e;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.team .team-bottom-row .team-items:hover .mem-details .social-links {
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+/* =========================================
+          APPOINMENT SECTION 
+=============================================*/
+
+.appoinment .app-form {
+    padding: 30px 50px 40px 100px;
+    background-color: #fff9f8;
+}
+
+.appoinment .app-form .form-wrap input,
+select,
+textarea {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a7a6a6;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d4d3d3;
+    display: block;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    background-color: transparent;
+}
+
+.appoinment .app-form .form-wrap select {
+    padding: 10px 0;
+}
+
+.appoinment .app-form .form-wrap .submit-btn>a {
+    display: inline-block;
+    max-width: 200px;
+    background-color: #ff817e;
+    text-transform: capitalize;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+}
+
+
+
+/* ===========================================
+            LATEST BLOG SECTION  
+==============================================*/
+.blog {
+    padding: 50px 0;
+}
+
+.blog .top-row .blog-header {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: capitalize;
+    color: #263a41;
+    margin-bottom: 30px;
+}
+
+.blog .top-row .blog-para {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #9b9b9b;
+}
+
+
+.blog .items-row img.pic.card-img-top {
+    padding: 15px;
+}
+
+.blog .bottom-row .card-deck .card:hover {
+    box-shadow: 3px 3px 5px #d4d3d3;
+    cursor: pointer;
+}
+
+.blog .bottom-row .card-deck .card a {
+    display: inline-block;
+    max-width: 140px;
+    color: #fff;
+    background-color: #30383b;
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.blog .bottom-row .card-deck .card:hover a {
+    background-color: #ff817e;
+}
+
+
+
+
+/* ===================================
+        CONTACT SECTION  
+======================================*/
+
+.contact {
+    padding: 50px 0;
+}
+
+.contact .top-row .contact-header {
+    font-family: 'Rufina',
+        serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #263a41;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.contact .top-row .contact-para {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #989898;
+}
+
+.contact .bottom-row {
+    margin-top: 90px;
+}
+
+.contact .bottom-row .con-left i.con-icons {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #ff817e;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 15px 10px;
+    font-weight: 600;
+
+}
+
+.contact .bottom-row .con-left p.con-semi-para {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #888888;
+    text-transform: uppercase;
+    padding-top: 5px;
+}
+
+
+.contact .bottom-row .con-right>.con-form input,
+textarea {
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid #e3e6ea;
+    color: #999999;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact .bottom-row .con-right>.con-form .con-btn {
+    width: 170px;
+    height: 50px;
+    background-color: #ff817e;
+    color: #fff;
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 50px;
+}
+
+
+
+/* ======================================
+        FOOTER SECTION   
+==========================================*/
+
+.footer {
+    background: #fff9f8;
+    padding: 50px 0;
+}
+
+.footer .f-menu {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer .f-menu .nav li a {
+    color: #263a41;
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.footer .f-menu .nav li:hover a {
+    color: #ff817e;
+}
+
+.footer .f-social-menu {
+    margin-bottom: 30px;
+}
+
+.footer .f-social-menu ul li a {
+    color: #3a414e;
+    font-size: 20px;
+    border-right: 1px solid #b1b4bb;
+}
+
+.footer .f-social-menu ul li:last-child a {
+    border-right: none;
+}
+
+.footer .f-social-menu ul li:hover a {
+    color: #ff817e;
+}
+
+.footer .cpy .cpy-text {
+    font-family: 'Roboto',
+        sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+}
+
+.footer .cpy .cpy-text>span {
+    color: #ff817e;
+}
